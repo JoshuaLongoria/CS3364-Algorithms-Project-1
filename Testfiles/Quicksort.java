@@ -8,7 +8,7 @@ public class Quicksort{
     public static void main(String[] args)throws IOException{
 
 //  Accessing the numbers from the files
-        List<String> lines = Files.readAllLines(Path.of("source1.txt"));
+        List<String> lines = Files.readAllLines(Path.of("Testfiles/source1.txt"));
 
 //  Grabbing those variables and making slots for them
         int[] numbers = new int[lines.size()];
