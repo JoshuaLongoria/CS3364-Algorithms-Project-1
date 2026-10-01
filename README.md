@@ -11,10 +11,10 @@ Course: CS 3364 – Analysis of Algorithms, Texas Tech University
 | Member | Contribution |
 |---|---|
 | Joshua Longoria | Quicksort-based inversion counting (`Quicksort.java`) |
-| Kylon Ford | Mergesort-based inversion counting |
-| Mason Womack | Third algorithm ??? |
+| Kylon Ford | Mergesort-based inversion counting (`MergeSort.java`) |
+| Mason Womack | Insertion sort-based inversion counting (`InversionSort.java`) |
 | Mia -- | Report |
-| Marvin -- | -- |
+| Marvin -- | Main function (`Sorting.java`) |
 
 ## Requirements
 
