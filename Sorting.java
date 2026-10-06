@@ -1,8 +1,17 @@
-﻿import java.utils.Scanner;
-import java.utils.Arraylist;
+﻿import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Scanner;
+
 
 
 public class Sorting{
+    
+    private static final int SOURCE_COUNT = 5;
+    private static final int PAGE_COUNT = 10000;
+    
     public static void main(String[] args){
         
         // Get filename and initialize arrays
