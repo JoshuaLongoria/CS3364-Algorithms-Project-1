@@ -17,7 +17,7 @@ public class Sorting{
         // Get filename and initialize arrays
         
         String filename = "/Testfiles/";
-        Arraylist<Integer> values = new Arraylist<Integer>();
+        ArrayList<Integer> values = new ArrayList<Integer>();
         
         System.out.print("Enter the filename of the data to be sorted including the extension: ");
         Scanner line = new Scanner(System.in);
