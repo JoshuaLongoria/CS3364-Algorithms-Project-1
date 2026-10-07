@@ -14,7 +14,7 @@ Course: CS 3364 – Analysis of Algorithms, Texas Tech University
 | Joshua Longoria | Quicksort-based inversion counting (`Quicksort.java`)          |
 | Kylon Ford      | Mergesort-based inversion counting (`MergeSort.java`)          |
 | Mason Womack    | Insertion sort-based inversion counting (`InversionSort.java`) |
-| Mia --          | Report                                                         |
+| Mia Troncoso          | Report                                                         |
 | Marvin Stephens | Main function (`Sorting.java`)                                 |
 
 ## Requirements
@@ -117,7 +117,7 @@ CS3364-Algorithms-Project-1/
 - [X]  File reading (`readSource`)
 - [X]  Quicksort with inversion counting, validated against a brute-force O(n²) counter
 - [ ]  Combined-rank pipeline (sum per page, order pages, reorder each source)
-- [ ]  Mergesort
+- [X]  Mergesort
 - [ ]  Third algorithm
 - [ ]  Report: problem interpretation, methodology, experimental results, conclusions
 
