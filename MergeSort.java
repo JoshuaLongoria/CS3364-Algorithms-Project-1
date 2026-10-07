@@ -4,6 +4,13 @@ import java.util.Scanner;
 
 public class MergeSort{
 
+    public MergeSort(){
+    }
+
+    public MergeSort(int[] array){
+        mergesort(array);
+    }
+
     // constructor to streamline creating each file and array, as well as sorting them
     public MergeSort(File f, int[] array){
         fileReading(f, array);
@@ -15,7 +22,11 @@ public class MergeSort{
         try (Scanner scanner = new Scanner(f)) {
             int i = 0;
             while(scanner.hasNextInt()){
-                array[i++] = scanner.nextInt();
+                if (i < array.length) {
+                    array[i++] = scanner.nextInt();
+                } else {
+                    scanner.nextInt();
+                }
             }
         } catch (FileNotFoundException e){
             e.printStackTrace();
@@ -23,16 +34,20 @@ public class MergeSort{
     }
 
     // public variable to count inversions in each file
-    public int inv = 0;
+    public long inv = 0;
     
     // increases the inverion 
     public void addInversion(){
         inv++;
     }
 
+    public void addInversion(long count){
+        inv += count;
+    }
+
     public int[] mergesort(int[] array){
         // base case
-        if(array.length <= 1)
+        if(array == null || array.length <= 1)
         {
             return array;
 
@@ -64,7 +79,9 @@ public class MergeSort{
             int[] RS = mergesort(R);
 
         
-            return merge(LS, RS);
+            int[] B = merge(LS, RS);
+            System.arraycopy(B, 0, array, 0, array.length);
+            return B;
         }
     }
 
@@ -91,7 +108,7 @@ public class MergeSort{
             } else 
             {
                 B[k] = R[j++];
-                addInversion();
+                addInversion(L.length - i);
             }
         }
         return B;
@@ -104,11 +121,11 @@ public class MergeSort{
 
     public static void main(String [] args) {
 
-        File file1 = new File("source1.txt");
-        File file2 = new File("source2.txt");
-        File file3 = new File("source3.txt");
-        File file4 = new File("source4.txt");
-        File file5 = new File("source5.txt");
+        File file1 = new File("Testfiles/source1.txt");
+        File file2 = new File("Testfiles/source2.txt");
+        File file3 = new File("Testfiles/source3.txt");
+        File file4 = new File("Testfiles/source4.txt");
+        File file5 = new File("Testfiles/source5.txt");
 
         int[] array1 = new int[10000];
         int[] array2 = new int[10000];

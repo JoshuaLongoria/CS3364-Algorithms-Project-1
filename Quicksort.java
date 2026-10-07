@@ -19,7 +19,7 @@ public class Quicksort {
     }
 
 
-    private static long quicksort(int[] array, int lowIndex, int highIndex) {
+    public static long quicksort(int[] array, int lowIndex, int highIndex) {
 
         if (lowIndex >= highIndex) {
             return 0;
