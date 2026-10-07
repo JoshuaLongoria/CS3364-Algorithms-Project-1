@@ -4,33 +4,13 @@ import java.util.Scanner;
 
 public class MergeSort{
 
-    // constructor to streamline creating each file and array, as well as sorting them
-    public MergeSort(File f, int[] array){
-        fileReading(f, array);
-        mergesort(array);
-    }
-
-    // saves the files contents to the array
-    public void fileReading(File f, int[] array){
-        try (Scanner scanner = new Scanner(f)) {
-            int i = 0;
-            while(scanner.hasNextInt()){
-                array[i++] = scanner.nextInt();
-            }
-        } catch (FileNotFoundException e){
-            e.printStackTrace();
-        }
-    }
-
     // public variable to count inversions in each file
-    public int inv = 0;
-    
-    // increases the inverion 
-    public void addInversion(){
-        inv++;
+    public long inv = 0;
+    public int[] sort(int[] array){
+        inv = 0; // reset
+        return mergesort(array);
     }
-
-    public int[] mergesort(int[] array){
+    private int[] mergesort(int[] array){
         // base case
         if(array.length <= 1)
         {
@@ -91,45 +71,10 @@ public class MergeSort{
             } else 
             {
                 B[k] = R[j++];
-                addInversion();
+                inv += (L.length-i);
             }
         }
         return B;
     }
 
-    // displays the inverions
-    public void displayInversions(int n){
-        System.out.println("The number of inversions in file " + n + " is " + inv + "\n");
-    }
-
-    public static void main(String [] args) {
-
-        File file1 = new File("source1.txt");
-        File file2 = new File("source2.txt");
-        File file3 = new File("source3.txt");
-        File file4 = new File("source4.txt");
-        File file5 = new File("source5.txt");
-
-        int[] array1 = new int[10000];
-        int[] array2 = new int[10000];
-        int[] array3 = new int[10000];
-        int[] array4 = new int[10000];
-        int[] array5 = new int[10000];
-        
-        MergeSort one = new MergeSort(file1, array1);
-        one.displayInversions(1);
-        
-        MergeSort two = new MergeSort(file2, array2);
-        two.displayInversions(2);
-
-        MergeSort three = new MergeSort(file3, array3);
-        three.displayInversions(3);
-
-        MergeSort four = new MergeSort(file4, array4);
-        four.displayInversions(4);
-
-        MergeSort five = new MergeSort(file5, array5);
-        five.displayInversions(5);
-        
-    }
 }

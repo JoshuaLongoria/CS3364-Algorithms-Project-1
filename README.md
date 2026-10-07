@@ -8,13 +8,14 @@ Course: CS 3364 – Analysis of Algorithms, Texas Tech University
 
 ## Team and contributions
 
-| Member | Contribution |
-|---|---|
-| Joshua Longoria | Quicksort-based inversion counting (`Quicksort.java`) |
-| Kylon Ford | Mergesort-based inversion counting (`MergeSort.java`) |
-| Mason Womack | Insertion sort-based inversion counting (`InversionSort.java`) |
-| Mia -- | Report |
-| Marvin -- | Main function (`Sorting.java`) |
+
+| Member          | Contribution                                                   |
+| --------------- | -------------------------------------------------------------- |
+| Joshua Longoria | Quicksort-based inversion counting (`Quicksort.java`)          |
+| Kylon Ford      | Mergesort-based inversion counting (`MergeSort.java`)          |
+| Mason Womack    | Insertion sort-based inversion counting (`InversionSort.java`) |
+| Mia --          | Report                                                         |
+| Marvin Stephens | Main function (`Sorting.java`)                                 |
 
 ## Requirements
 
@@ -91,13 +92,14 @@ _TODO: describe what the program prints and how to read it._
 
 ## Results
 
-| Source | Inversions | Reliability rank |
-|---|---|---|
-| source1 | _TODO_ | _TODO_ |
-| source2 | _TODO_ | _TODO_ |
-| source3 | _TODO_ | _TODO_ |
-| source4 | _TODO_ | _TODO_ |
-| source5 | _TODO_ | _TODO_ |
+
+| Source  | Inversions | Reliability rank |
+| ------- | ---------- | ---------------- |
+| source1 | _TODO_     | _TODO_           |
+| source2 | _TODO_     | _TODO_           |
+| source3 | _TODO_     | _TODO_           |
+| source4 | _TODO_     | _TODO_           |
+| source5 | _TODO_     | _TODO_           |
 
 ## Project structure
 
@@ -112,12 +114,12 @@ CS3364-Algorithms-Project-1/
 
 ## Status
 
-- [x] File reading (`readSource`)
-- [x] Quicksort with inversion counting, validated against a brute-force O(n²) counter
-- [ ] Combined-rank pipeline (sum per page, order pages, reorder each source)
-- [ ] Mergesort
-- [ ] Third algorithm
-- [ ] Report: problem interpretation, methodology, experimental results, conclusions
+- [X]  File reading (`readSource`)
+- [X]  Quicksort with inversion counting, validated against a brute-force O(n²) counter
+- [ ]  Combined-rank pipeline (sum per page, order pages, reorder each source)
+- [ ]  Mergesort
+- [ ]  Third algorithm
+- [ ]  Report: problem interpretation, methodology, experimental results, conclusions
 
 ## Verification
 

@@ -4,22 +4,15 @@ import java.util.List;
 
 
 public class Quicksort {
-
-    public static void main(String[] args) throws IOException {
-
-        int[][] sources = new int[5][];
-        long[] counts = new long[5];
-
-        for (int s = 0; s < 5; s++) {
-            sources[s] = readSource("Testfiles/source" + (s + 1) + ".txt");
-            counts[s] = quicksort(sources[s], 0, sources[s].length - 1);
-            System.out.println("source" + (s + 1) + ": " + counts[s]);
-
+    public long inv = 0;
+     
+     public long sort(int[] array) {
+            inv = 0;
+            inv = quicksort(array, 0, array.length - 1);
+            return inv;
         }
-    }
-
-
-    private static long quicksort(int[] array, int lowIndex, int highIndex) {
+        
+    private long Quicksort(int[] array, int lowIndex, int highIndex) {
 
         if (lowIndex >= highIndex) {
             return 0;
@@ -83,17 +76,4 @@ public class Quicksort {
 //finishes
         return cross + left + right;
     }
-
-    // To run through the 5 source files
-    private static int[] readSource(String filename) throws IOException {
-        List<String> lines = Files.readAllLines(Path.of(filename));
-        int[] numbers = new int[lines.size()];
-        for (int i = 0; i < lines.size(); i++) {
-            numbers[i] = Integer.parseInt(lines.get(i).trim());
-        }
-        return numbers;
-    }
-
 }
-
-
