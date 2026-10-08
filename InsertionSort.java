@@ -3,10 +3,10 @@ import java.nio.file.*;
 import java.util.List;
 
 public class InsertionSort {
-    public long inv = 0;
+
     // pretty standard insertion sort, but counts inversions on the fly
-    public long sort(int[] arr) {
-    
+    public static long sort(int[] arr) {
+        long inv = 0;
         for (int i = 1; i < arr.length; i++) {
             int key = arr[i];
             int j = i - 1;

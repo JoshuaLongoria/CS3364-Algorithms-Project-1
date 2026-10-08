@@ -6,9 +6,11 @@ public class MergeSort{
 
     // public variable to count inversions in each file
     public long inv = 0;
-    public int[] sort(int[] array){
-        inv = 0; // reset
-        return mergesort(array);
+    public static long sort(int[] array){
+        MergeSort m = new MergeSort();// reset
+        int[] sorted = m.mergesort(array);
+        System.arraycopy(sorted, 0, array, 0, sorted.length);
+        return m.inv;
     }
     private int[] mergesort(int[] array){
         // base case

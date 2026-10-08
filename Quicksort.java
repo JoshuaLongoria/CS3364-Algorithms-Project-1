@@ -4,15 +4,12 @@ import java.util.List;
 
 
 public class Quicksort {
-    public long inv = 0;
      
-     public long sort(int[] array) {
-            inv = 0;
-            inv = quicksort(array, 0, array.length - 1);
-            return inv;
+     public static long sort(int[] array) {
+            return quicksort(array, 0, array.length - 1);
         }
         
-    private long Quicksort(int[] array, int lowIndex, int highIndex) {
+    private static long quicksort(int[] array, int lowIndex, int highIndex) {
 
         if (lowIndex >= highIndex) {
             return 0;
