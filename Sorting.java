@@ -4,7 +4,6 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class Sorting {
 
     public static void main(String[] args) throws IOException {
@@ -38,7 +37,6 @@ public class Sorting {
 
         }
         in.close();
-
 
     }
     private static int[] readSource(String filename) throws IOException {
